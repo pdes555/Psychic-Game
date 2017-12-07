@@ -1,8 +1,8 @@
-const wins = 0
+let wins = 0
 let losses = 0
 let guessesLeft = 10
 let guesses = 0
-const lettters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 document.getElementById("wins").innerHTML = wins;
 // make an array with all letters XXXXXXXXXXXXXXXXXXX
@@ -28,8 +28,9 @@ document.onkeydown = function(event) {
 	}
 }
 
-if (guessesLeft < 1) {
+if (guessesLeft === 0) {
 	losses++
+	document.getElementById(guessesLeft).innerHTML = "";
 }
 
 // make an if statement that checks if that key matches the letter in the array XXXXXXXXXXXXX
