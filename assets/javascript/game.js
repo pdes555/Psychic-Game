@@ -4,7 +4,7 @@ let guessesLeft = 10
 let guesses = 0
 const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-document.getElementById("wins").innerHTML = wins;
+// document.getElementById("wins").innerHTML = wins;
 // make an array with all letters XXXXXXXXXXXXXXXXXXX
 
 // make a function that randomly selects a number from the array XXXXXXXXXXXXXXX
@@ -23,14 +23,14 @@ document.onkeydown = function(event) {
 	if (keypress === randomLetter) {
 		wins++
 	} else {
-		document.getElementById("guesses").append(keypress + ", ");
 		guessesLeft--
+		document.getElementById("guesses").append(keypress + ", ");
 	}
 }
 
 if (guessesLeft === 0) {
 	losses++
-	document.getElementById(guessesLeft).innerHTML = "";
+	document.getElementById(guessesLeft).append = ("");
 }
 
 // make an if statement that checks if that key matches the letter in the array XXXXXXXXXXXXX
